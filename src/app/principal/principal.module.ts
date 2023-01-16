@@ -19,7 +19,8 @@ import { AsincronaComponent } from './asincrona/asincrona.component';
   ],
   exports:[
     Pagina1Component,
-    RetoComponent
+    RetoComponent,
+    AsincronaComponent
   ]
 })
 export class PrincipalModule { }
