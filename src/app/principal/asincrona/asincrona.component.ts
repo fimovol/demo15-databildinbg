@@ -29,7 +29,15 @@ export class AsincronaComponent implements OnInit {
     carrera: ""
   }
   agregar(){
-    let variable=this.array.length+1
+    let arraydenumeros:Array<number> = []
+    this.array.map((e)=>{
+      let numero = parseInt(e.id)
+      arraydenumeros.push(numero)
+    })
+    
+    let numeromayor = Math.max(...arraydenumeros)
+
+    let variable=numeromayor +1 
     let string = variable.toString()
     this.objeto = {
       id: string,
@@ -39,13 +47,9 @@ export class AsincronaComponent implements OnInit {
     }
     this.array.push(this.objeto)
   }
-  eliminar(id=0){
-    
+  eliminar(id=""){
       let ass = this.array.findIndex(object => {
-        if(object.id===undefined){
-          return object.id === id;
-        }
-        return -1
+        return object.id === id;
       });
       this.array.splice(ass, 1);
       }

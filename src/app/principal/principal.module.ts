@@ -4,6 +4,8 @@ import { Pagina1Component } from './pagina1/pagina1.component';
 import { FormsModule } from '@angular/forms';
 import { RetoComponent } from './reto/reto.component';
 import { AsincronaComponent } from './asincrona/asincrona.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonesComponent } from './pokemones/pokemones.component';
 
 
 
@@ -11,16 +13,19 @@ import { AsincronaComponent } from './asincrona/asincrona.component';
   declarations: [
     Pagina1Component,
     RetoComponent,
-    AsincronaComponent
+    AsincronaComponent,
+    PokemonesComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports:[
     Pagina1Component,
     RetoComponent,
-    AsincronaComponent
+    AsincronaComponent,
+    PokemonesComponent
   ]
 })
 export class PrincipalModule { }
